@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- ============ SEO ============ -->
+<title>Southeast Player Management | Football Consultancy &amp; Player Development, Waterford</title>
+<meta name="description" content="Southeast Player Management is a boutique football consultancy in Waterford, Ireland, offering independent player development, assessment and advisory for ambitious young footballers (14+) and their families." />
+<link rel="canonical" href="https://southeastplayermanagement.ie/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Southeast Player Management" />
+<meta name="theme-color" content="#0E2A1F" />
+
+<!-- Geo -->
+<meta name="geo.region" content="IE-WD" />
+<meta name="geo.placename" content="Waterford, Ireland" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Southeast Player Management" />
+<meta property="og:title" content="Southeast Player Management | Football Consultancy &amp; Player Development" />
+<meta property="og:description" content="Independent football consultancy in Waterford, Ireland. Personalised development, assessment and advisory for ambitious young players (14+) and their families." />
+<meta property="og:url" content="https://southeastplayermanagement.ie/" />
+<meta property="og:locale" content="en_IE" />
+<meta property="og:image" content="https://southeastplayermanagement.ie/images/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Southeast Player Management — Developing players. Guiding futures." />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Southeast Player Management | Football Consultancy, Waterford" />
+<meta name="twitter:description" content="Independent football consultancy supporting ambitious young players (14+) and their families across Southeast Ireland." />
+<meta name="twitter:image" content="https://southeastplayermanagement.ie/images/og-image.png" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "@id": "https://southeastplayermanagement.ie/#organization",
+  "name": "Southeast Player Management",
+  "alternateName": "Southeast Player Management Football Consultancy",
+  "description": "Boutique football consultancy offering independent player development, assessment and advisory for ambitious young footballers (14+) and their families across Southeast Ireland.",
+  "url": "https://southeastplayermanagement.ie/",
+  "logo": "https://southeastplayermanagement.ie/images/favicon-512.png",
+  "image": "https://southeastplayermanagement.ie/images/og-image.png",
+  "email": "info@southeastplayermanagement.ie",
+  "slogan": "Developing players. Guiding futures.",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Southeast Ireland"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Waterford",
+    "addressRegion": "County Waterford",
+    "addressCountry": "IE"
+  },
+  "location": {
+    "@type": "Place",
+    "name": "SETU Arena",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Waterford",
+      "addressCountry": "IE"
+    }
+  },
+  "knowsAbout": ["Football player development", "Youth football", "Player assessment", "Academy pathways", "Football advisory"],
+  "founder": [
+    { "@type": "Person", "name": "Mike Geoghegan", "jobTitle": "Founder & Senior Partner" },
+    { "@type": "Person", "name": "Seán Geoghegan", "jobTitle": "Founder & Senior Partner" }
+  ],
+  "employee": [
+    { "@type": "Person", "name": "David Doyle", "jobTitle": "Head Scout" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<style>
+  /* ---------- tokens ---------- */
+  :root{
+    --ink:#0B1F17;            /* near-black green */
+    --bg:#0E2A1F;             /* forest */
+    --bg-2:#0A1F17;           /* deeper */
+    --green:#1F4D38;          /* mid */
+    --cream:#E8E4D8;          /* primary text */
+    --cream-soft:rgba(232,228,216,.62);
+    --cream-line:rgba(232,228,216,.18);
+    --gold:#D4B97A;
+    --gold-warm:#C8A560;
+
+    --serif:"Fraunces", "Times New Roman", serif;
+    --sans:"Inter", system-ui, sans-serif;
+
+    --pad-x: clamp(24px, 5vw, 96px);
+    --maxw: 1440px;
+
+    --ease: cubic-bezier(.2,.7,.2,1);
+
+    /* tweakable */
+    --hero-size: 112px;       /* hero wordmark size */
+    --hero-line: 1.02;        /* line-height (>= 1 keeps descenders safe) */
+    --hero-track: -0.025em;   /* letter-spacing */
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  html{scroll-behavior:smooth}
+  body{overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--gold);color:var(--ink)}
+
+  /* film-grain overlay */
+  body::after{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.06;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px var(--pad-x);
+    transition:background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  .nav.scrolled{
+    background:rgba(11,31,23,.78);
+    backdrop-filter:blur(14px) saturate(120%);
+    -webkit-backdrop-filter:blur(14px) saturate(120%);
+    border-bottom-color:var(--cream-line);
+    padding:14px var(--pad-x);
+  }
+  .brand{
+    display:flex;align-items:center;gap:12px;
+    font-family:var(--serif);font-weight:400;font-size:18px;letter-spacing:.02em;
+  }
+  .brand-mark{
+    width:42px;height:36px;color:var(--gold);
+    display:grid;place-items:center;
+  }
+  .brand-mark svg{width:100%;height:100%;display:block}
+  .brand-text{display:flex;flex-direction:column;line-height:1}
+  .brand-text b{font-weight:500;letter-spacing:.18em;font-family:var(--sans);font-size:11px;text-transform:uppercase;color:var(--cream)}
+  .brand-text em{font-style:normal;font-family:var(--serif);font-size:18px;color:var(--cream);margin-top:2px}
+
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{
+    font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--cream);opacity:.8;position:relative;padding:6px 0;
+    transition:opacity .3s var(--ease), color .3s var(--ease);
+  }
+  .nav-links a:hover{opacity:1;color:var(--gold)}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);
+    transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);
+  }
+  .nav-links a:hover::after{transform:scaleX(1)}
+  .nav-cta{
+    font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    padding:11px 20px;border:1px solid var(--gold);color:var(--gold);border-radius:999px;
+    transition:all .35s var(--ease);
+  }
+  .nav-cta:hover{background:var(--gold);color:var(--ink)}
+  @media (max-width:880px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;min-height:100vh;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding: clamp(180px,22vh,260px) var(--pad-x) clamp(40px,6vw,80px);
+    overflow:hidden;isolation:isolate;
+  }
+  .hero-bg{
+    position:absolute;inset:0;z-index:-2;
+    background-image:url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=2400&q=80");
+    background-size:cover;background-position:center 35%;
+    transform:scale(1.05);
+    animation: heroZoom 14s var(--ease) forwards;
+  }
+  @keyframes heroZoom{ to{ transform:scale(1); } }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(180deg, rgba(11,31,23,.55) 0%, rgba(11,31,23,.55) 35%, rgba(11,31,23,.95) 100%),
+      linear-gradient(90deg, rgba(11,31,23,.7) 0%, rgba(11,31,23,.2) 50%, rgba(11,31,23,.7) 100%);
+  }
+
+  .hero-eyebrow{
+    position:absolute;top: clamp(110px,14vh,180px);left:var(--pad-x);
+    display:flex;align-items:center;gap:14px;
+    font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+    opacity:0;animation: rise .9s .3s var(--ease) forwards;
+  }
+  .hero-eyebrow .dot{width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .hero-eyebrow .line{width:60px;height:1px;background:var(--gold);opacity:.6}
+
+  .hero-wordmark{
+    font-family:var(--serif);
+    font-weight:300;
+    font-size: clamp(44px, 8vw, var(--hero-size));
+    line-height: var(--hero-line);
+    letter-spacing: var(--hero-track);
+    color:var(--cream);
+  }
+  /* overflow:hidden masks the rise-in; pad-bottom .22em + line-height >=1 keeps y/g/p descenders fully visible */
+  .hero-wordmark .row{display:block;overflow:hidden;padding-bottom:.22em}
+  .hero-wordmark .row span{display:inline-block;transform:translateY(110%);animation:rise 1.1s var(--ease) forwards}
+  .hero-wordmark .row:nth-child(1) span{animation-delay:.45s}
+  .hero-wordmark .row:nth-child(2) span{animation-delay:.6s;font-style:italic;color:var(--gold);font-weight:300}
+  .hero-wordmark .row:nth-child(3) span{animation-delay:.75s}
+
+  @keyframes rise{ from{opacity:0;transform:translateY(110%)} to{opacity:1;transform:translateY(0)} }
+
+  .hero-foot{
+    margin-top: clamp(28px,4vw,56px);
+    display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;
+    opacity:0;animation:fade 1s 1.1s var(--ease) forwards;
+  }
+  @keyframes fade{ from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+  .hero-tag{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(20px,2.2vw,30px);max-width:30ch;color:var(--cream);
+    line-height:1.25;
+  }
+  .hero-meta{
+    display:flex;gap:48px;align-items:flex-end;
+  }
+  .hero-meta .cell{display:flex;flex-direction:column;gap:6px;font-family:var(--sans)}
+  .hero-meta .cell .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-soft)}
+  .hero-meta .cell .v{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--cream)}
+
+  .scroll-cue{
+    position:absolute;left:var(--pad-x);bottom:24px;
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-soft);
+    display:flex;align-items:center;gap:10px;
+  }
+  .scroll-cue .bar{width:1px;height:36px;background:var(--cream-soft);position:relative;overflow:hidden}
+  .scroll-cue .bar::after{content:"";position:absolute;inset:0;background:var(--gold);transform:translateY(-100%);animation:scrollBar 2.4s var(--ease) infinite}
+  @keyframes scrollBar{ 0%{transform:translateY(-100%)} 50%{transform:translateY(0)} 100%{transform:translateY(100%)} }
+
+  /* ---------- marquee ---------- */
+  .marquee{
+    border-block:1px solid var(--cream-line);
+    overflow:hidden;white-space:nowrap;
+    padding:22px 0;background:var(--bg-2);
+  }
+  .marquee-track{display:inline-flex;gap:70px;animation:scroll 40s linear infinite;will-change:transform}
+  .marquee-track span{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(28px,3.4vw,52px);color:var(--cream);
+    display:inline-flex;align-items:center;gap:70px;
+  }
+  .marquee-track span::after{
+    content:"✦";color:var(--gold);font-style:normal;font-size:.5em;transform:translateY(-.4em);
+  }
+  @keyframes scroll{ to{ transform: translateX(-50%); } }
+
+  /* ---------- section primitives ---------- */
+  section{position:relative}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding: clamp(80px,12vw,180px) var(--pad-x)}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:14px;
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+    margin-bottom:32px;
+  }
+  .eyebrow::before{content:"";display:block;width:36px;height:1px;background:var(--gold)}
+
+  .h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(40px, 5.6vw, 88px);line-height:.98;letter-spacing:-.02em;
+    color:var(--cream);
+  }
+  .h2 i{font-style:italic;color:var(--gold);font-weight:300}
+
+  .lead{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(22px,2.4vw,32px);line-height:1.4;color:var(--cream);max-width:32ch;
+  }
+  .body{font-size:16px;line-height:1.7;color:var(--cream-soft);max-width:60ch}
+  .body + .body{margin-top:18px}
+
+  /* fade-in on scroll */
+  .reveal{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d2{transition-delay:.12s}
+  .reveal.d3{transition-delay:.24s}
+  .reveal.d4{transition-delay:.36s}
+
+  /* ---------- WHO WE ARE ---------- */
+  .who{background:var(--bg)}
+  .who-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,120px);align-items:start}
+  @media (max-width:900px){.who-grid{grid-template-columns:1fr}}
+  .who-num{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    color:var(--gold);font-size:clamp(80px,12vw,200px);line-height:.85;letter-spacing:-.02em;
+    display:block;margin-bottom:18px;
+  }
+  .who-num small{font-size:.18em;letter-spacing:.2em;color:var(--cream-soft);font-style:normal;display:block;margin-top:14px}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px;
+    border-top:1px solid var(--cream-line);padding-top:36px;
+  }
+  .stat .k{font-family:var(--serif);font-size:clamp(36px,4.4vw,64px);color:var(--cream);font-weight:300;letter-spacing:-.02em;line-height:1}
+  .stat .k i{color:var(--gold);font-style:italic}
+  .stat .v{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-soft);margin-top:14px;max-width:22ch}
+
+  /* ---------- VISION / MISSION editorial spread ---------- */
+  .pillars{
+    background:linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%);
+    border-block:1px solid var(--cream-line);
+  }
+  .pillars-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-left:1px solid var(--cream-line);border-right:1px solid var(--cream-line)}
+  @media (max-width:900px){.pillars-grid{grid-template-columns:1fr}}
+  .pillar{
+    padding:clamp(48px,6vw,96px) clamp(28px,4vw,72px);
+    border-right:1px solid var(--cream-line);
+    position:relative;
+    transition:background .5s var(--ease);
+  }
+  .pillar:last-child{border-right:none}
+  @media (max-width:900px){.pillar{border-right:none;border-bottom:1px solid var(--cream-line)} .pillar:last-child{border-bottom:none}}
+  .pillar:hover{background:rgba(212,185,122,.04)}
+  .pillar .label{
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
+    display:flex;align-items:center;gap:14px;margin-bottom:32px;
+  }
+  .pillar .label::before{content:"";width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+  .pillar h3{
+    font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,64px);line-height:1;letter-spacing:-.02em;
+    color:var(--cream);margin-bottom:32px;
+  }
+  .pillar h3 i{font-style:italic;color:var(--gold)}
+  .pillar p{font-size:17px;line-height:1.6;color:var(--cream-soft);max-width:38ch}
+
+  /* ---------- APPROACH (split image + text) ---------- */
+  .approach{position:relative;overflow:hidden}
+  .approach-grid{display:grid;grid-template-columns:6fr 6fr;gap:clamp(40px,6vw,96px);align-items:center}
+  @media (max-width:900px){.approach-grid{grid-template-columns:1fr}}
+  .approach-img{
+    position:relative;aspect-ratio: 4/5;border-radius:2px;overflow:hidden;
+    background-image:url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1400&q=80");
+    background-size:cover;background-position:center;
+  }
+  .approach-img::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 50%, rgba(11,31,23,.55) 100%);
+  }
+  .approach-img .badge{
+    position:absolute;left:24px;bottom:24px;
+    font-family:var(--serif);font-style:italic;font-size:18px;color:var(--cream);
+    display:flex;align-items:center;gap:10px;
+  }
+  .approach-img .badge::before{content:"";width:24px;height:1px;background:var(--gold)}
+
+  .approach-list{margin-top:48px;display:flex;flex-direction:column;border-top:1px solid var(--cream-line)}
+  .approach-row{
+    display:grid;grid-template-columns:60px 1fr;gap:24px;
+    padding:28px 0;border-bottom:1px solid var(--cream-line);
+    transition:padding .4s var(--ease);
+  }
+  .approach-row:hover{padding-left:14px}
+  .approach-row .n{
+    font-family:var(--serif);font-style:italic;color:var(--gold);font-size:22px;font-weight:300;line-height:1;padding-top:6px;
+  }
+  .approach-row .t{font-family:var(--serif);font-weight:300;font-size:24px;color:var(--cream);line-height:1.3;letter-spacing:-.01em}
+  .approach-row .d{font-size:14px;line-height:1.6;color:var(--cream-soft);margin-top:8px;max-width:46ch}
+
+  /* ---------- DIFFERENCE (full-bleed quote) ---------- */
+  .difference{
+    position:relative;padding:clamp(100px,14vw,200px) var(--pad-x);
+    background:var(--ink);text-align:center;overflow:hidden;
+  }
+  .difference::before{
+    content:"";position:absolute;inset:0;opacity:.18;
+    background-image:url("https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=2400&q=80");
+    background-size:cover;background-position:center;
+    filter:grayscale(.4) contrast(1.05);
+  }
+  .difference::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse at center, transparent 0%, var(--ink) 80%);
+  }
+  .difference-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
+  .quote-mark{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:96px;line-height:1;opacity:.7}
+  .quote{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(36px,5.4vw,84px);line-height:1.05;letter-spacing:-.02em;color:var(--cream);
+    margin:24px 0 36px;
+  }
+  .quote i{font-style:italic;color:var(--gold)}
+  .attribution{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-soft)}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--bg)}
+  .services-head{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,120px);align-items:end;margin-bottom:80px}
+  @media (max-width:900px){.services-head{grid-template-columns:1fr}}
+  .service-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cream-line);border-block:1px solid var(--cream-line)}
+  @media (max-width:900px){.service-cards{grid-template-columns:1fr}}
+  .service{
+    background:var(--bg);padding:clamp(32px,3.4vw,52px);
+    display:flex;flex-direction:column;gap:24px;min-height:420px;
+    position:relative;overflow:hidden;
+    transition:background .5s var(--ease);
+  }
+  .service::before{
+    content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease);
+  }
+  .service:hover{background:#0c2419}
+  .service:hover::before{transform:scaleX(1)}
+  .service .num{
+    font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px;letter-spacing:.18em;
+  }
+  .service h4{
+    font-family:var(--serif);font-weight:300;font-size:32px;line-height:1.1;color:var(--cream);letter-spacing:-.01em;
+  }
+  .service .desc{font-size:14.5px;line-height:1.65;color:var(--cream-soft);flex:1}
+  .service ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:var(--cream)}
+  .service ul li{padding-left:18px;position:relative}
+  .service ul li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--gold)}
+  .service .price{
+    font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px;letter-spacing:.16em;text-transform:uppercase;
+    border-top:1px solid var(--cream-line);padding-top:16px;
+  }
+
+  .pricing-note{
+    margin-top:48px;text-align:center;
+    font-family:var(--serif);font-style:italic;font-size:18px;color:var(--cream-soft);
+  }
+
+  /* ---------- PEOPLE ---------- */
+  .people{background:var(--bg-2);border-top:1px solid var(--cream-line)}
+  .people-head{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,120px);align-items:end;margin-bottom:80px}
+  @media (max-width:900px){.people-head{grid-template-columns:1fr}}
+  .people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cream-line);border-block:1px solid var(--cream-line)}
+  @media (max-width:900px){.people-grid{grid-template-columns:1fr}}
+  .person{background:var(--bg-2);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:24px;transition:background .5s var(--ease)}
+  .person:hover{background:#0c2419}
+  .portrait{
+    aspect-ratio: 4/5; position:relative; overflow:hidden;
+    background:linear-gradient(160deg, var(--green) 0%, var(--bg) 100%);
+    border:1px solid var(--cream-line);
+    display:grid;place-items:center;
+  }
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.02)}
+  .portrait.has-photo::after{display:none}
+  .portrait::after{
+    content:"Portrait TBC";position:absolute;left:14px;bottom:12px;
+    font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--cream-soft);
+    font-family:var(--sans);
+  }
+  .portrait .initials{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(72px,8vw,128px);color:var(--gold);line-height:1;letter-spacing:-.02em;
+    opacity:.88;
+  }
+  .person h4{font-family:var(--serif);font-weight:300;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:var(--cream)}
+  .person .role{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:-14px}
+  .person .creds{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--cream-soft);line-height:1.5;border-top:1px solid var(--cream-line);padding-top:18px}
+  .person ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:var(--cream)}
+  .person ul li{padding-left:18px;position:relative}
+  .person ul li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:1px;background:var(--gold)}
+  .person .note{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--cream-soft)}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    position:relative;background:var(--bg-2);overflow:hidden;
+    border-top:1px solid var(--cream-line);
+  }
+  .contact::before{
+    content:"SOUTHEAST";
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    font-family:var(--serif);font-weight:300;font-size:clamp(160px,22vw,400px);
+    color:rgba(212,185,122,.04);letter-spacing:-.04em;white-space:nowrap;pointer-events:none;
+  }
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);position:relative}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+  .contact h2{margin-bottom:24px}
+  .contact .lead{margin-bottom:48px}
+  .contact-info{display:flex;flex-direction:column;gap:32px;margin-top:48px}
+  .info-row{display:grid;grid-template-columns:120px 1fr;gap:24px;padding-bottom:24px;border-bottom:1px solid var(--cream-line)}
+  .info-row .k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-soft);padding-top:6px}
+  .info-row .v{font-family:var(--serif);font-weight:300;font-size:22px;color:var(--cream);line-height:1.3}
+  .info-row .v a:hover{color:var(--gold)}
+
+  form{display:flex;flex-direction:column;gap:24px}
+  .field{display:flex;flex-direction:column;gap:8px}
+  .field label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-soft)}
+  .field input, .field select, .field textarea{
+    background:transparent;border:none;border-bottom:1px solid var(--cream-line);
+    color:var(--cream);font-family:var(--sans);font-size:17px;padding:12px 0;
+    transition:border-color .3s var(--ease);
+  }
+  .field textarea{resize:vertical;min-height:120px}
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-bottom-color:var(--gold)}
+  .field select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%23D4B97A' fill='none' stroke-width='1.5'/></svg>");background-repeat:no-repeat;background-position:right 4px center}
+  .field select option{background:var(--bg)}
+
+  .submit{
+    margin-top:12px;align-self:flex-start;
+    background:var(--gold);color:var(--ink);border:none;cursor:pointer;
+    font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+    padding:18px 36px;border-radius:999px;
+    display:inline-flex;align-items:center;gap:14px;
+    transition:all .35s var(--ease);
+  }
+  .submit:hover{background:var(--cream);transform:translateY(-2px)}
+  .submit svg{transition:transform .35s var(--ease)}
+  .submit:hover svg{transform:translateX(4px)}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);padding:80px var(--pad-x) 32px;
+    border-top:1px solid var(--cream-line);
+  }
+  .foot-top{
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;
+    padding-bottom:64px;border-bottom:1px solid var(--cream-line);
+  }
+  @media (max-width:900px){.foot-top{grid-template-columns:1fr 1fr}}
+  .foot-brand{display:flex;flex-direction:column;gap:24px;max-width:360px;color:var(--gold)}
+  .foot-brand .foot-logo-svg{width:100%;max-width:320px;height:auto;display:block}
+  .foot-brand .tag{font-family:var(--serif);font-style:italic;font-weight:300;font-size:20px;color:var(--cream-soft);line-height:1.3}
+  .foot-col h5{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .foot-col ul li a{font-family:var(--serif);font-size:18px;color:var(--cream);transition:color .3s var(--ease)}
+  .foot-col ul li a:hover{color:var(--gold)}
+  .foot-bot{
+    margin-top:32px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-soft);
+  }
+
+  /* ---------- global overflow guard ---------- */
+  h1,h2,h3,h4,.h2,.lead,.body,.quote,.pillar h3,.hero-tag{overflow-wrap:break-word}
+  .contact-grid > *, .who-grid > *, .approach-grid > *, .info-row > *{min-width:0}
+
+  /* ---------- mobile ---------- */
+  @media (max-width:600px){
+    :root{ --pad-x: 22px; }
+
+    /* headings: dial the floor down so long words don't run off-screen */
+    .h2{font-size:clamp(32px,8.5vw,52px);line-height:1.04}
+    .hero-tag{font-size:19px}
+    .lead{font-size:20px;max-width:none}
+    .pillar h3{font-size:clamp(30px,8vw,44px)}
+    .quote{font-size:clamp(28px,8vw,40px)}
+    .who-num{font-size:clamp(72px,22vw,120px)}
+
+    /* hero meta: stack instead of a too-wide row, and keep clear of the scroll cue */
+    .hero-meta{flex-wrap:wrap;gap:22px 32px}
+    .hero-meta .cell{min-width:40%}
+    .hero-foot{gap:28px;padding-bottom:48px}
+    .scroll-cue{display:none}
+
+    /* contact info rows: let long values (email) wrap, narrower label column */
+    .info-row{grid-template-columns:92px 1fr;gap:16px}
+    .info-row .v{font-size:18px;overflow-wrap:anywhere;word-break:break-word}
+    .info-row .v a{overflow-wrap:anywhere;word-break:break-word}
+
+    /* email link in contact should never overflow */
+    .email-link{overflow-wrap:anywhere;word-break:break-word}
+
+    /* watermark behind contact — keep it from forcing width */
+    .contact::before{font-size:38vw}
+
+    /* form fields full width safety */
+    .field input,.field select,.field textarea{max-width:100%}
+  }
+
+  @media (max-width:380px){
+    .h2{font-size:30px}
+    .info-row{grid-template-columns:1fr;gap:8px}
+    .info-row .k{padding-top:0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 1000 852.62" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M979.2,355.33C921.76,162.3,745.42,2.79,500,0,254.58,2.79,78.24,162.3,20.8,355.33c-49.57,166.6-12.75,356.47,134.11,497.29-87.95-100.95-128.33-214.39-131.06-323.61l116.17-125.25,169.83,34.27,72.06,206.41-108.13,174.6,115.24-169.17h221.94l115.24,169.17-108.13-174.6,72.06-206.41,169.83-34.27,116.17,125.25c-2.72,109.22-43.1,222.66-131.06,323.61,146.86-140.82,183.68-330.69,134.11-497.29ZM500,39.03c41.11,0,81.36,5.35,119.97,15.49l-119.97,52.13-119.97-52.13c38.61-10.14,78.86-15.49,119.97-15.49ZM23.91,503.81c1.34-48.1,9.93-95.12,24.92-139.59,14.01-41.58,33.38-80.23,57.13-115.32l13.86,134.17-95.91,120.74ZM146.88,378.03l-10.11-169.8c51.88-61.36,118.45-108.71,193.17-137.51l155.38,62.21,2.3,157.86-172.16,128.95-168.57-41.72ZM609.86,640.1h-219.72l-62.28-206.89,172.15-121.28h0s0,0,0,0l172.15,121.28-62.28,206.89ZM853.12,378.03l-168.57,41.72-172.16-128.95,2.3-157.86,155.38-62.21c74.72,28.81,141.28,76.15,193.17,137.51l-10.11,169.8ZM880.18,383.07l13.86-134.17c23.75,35.09,43.12,73.74,57.13,115.32,14.99,44.47,23.57,91.49,24.92,139.59l-95.91-120.74Z"/></svg></span>
+    <span class="brand-text">
+      <b>Southeast</b>
+      <em>Player Management</em>
+    </span>
+  </a>
+  <nav class="nav-links">
+    <a href="#who">Who We Are</a>
+    <a href="#vision">Vision</a>
+    <a href="#approach">Approach</a>
+    <a href="#services">Services</a>
+    <a href="#people">People</a>
+    <a href="#contact" class="nav-cta" style="padding: 6px 20px">Enquire</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-eyebrow">
+    <span class="dot"></span>
+    <span>Boutique Football Consultancy · Southeast Ireland</span>
+    <span class="line"></span>
+  </div>
+
+  <h1 class="hero-wordmark" aria-label="Developing players. Guiding futures.">
+    <span class="row"><span>Developing players.</span></span>
+    <span class="row"><span>Guiding futures.</span></span>
+    <span class="row"><span></span></span>
+  </h1>
+
+  <div class="hero-foot">
+    <p class="hero-tag">Personalised, high-level guidance for ambitious young players and the families behind them.</p>
+    <div class="hero-meta">
+      <div class="cell"><span class="k">Founded</span><span class="v">Waterford, Ireland</span></div>
+      <div class="cell"><span class="k">Players</span><span class="v">Aged 14+</span></div>
+      <div class="cell"><span class="k">Approach</span><span class="v">Independent</span></div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><div class="bar"></div><span>Scroll</span></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Independent advisors</span>
+    <span>Long-term focus</span>
+    <span>Player-first</span>
+    <span>Trusted guidance</span>
+    <span>Honest perspective</span>
+    <span>Independent advisors</span>
+    <span>Long-term focus</span>
+    <span>Player-first</span>
+    <span>Trusted guidance</span>
+    <span>Honest perspective</span>
+  </div>
+</div>
+
+<!-- ============ WHO WE ARE ============ -->
+<section class="who" id="who">
+  <div class="wrap who-grid">
+    <div class="reveal">
+      <div class="eyebrow">01 — Who We Are</div>
+      <span class="who-num"><i>S</i>PM<small>Est. Waterford</small></span>
+    </div>
+    <div class="reveal d2">
+      <h2 class="h2">A boutique football consultancy <i>built around the player.</i></h2>
+      <p class="body" style="margin-top:40px">Southeast Player Management supports young football players (aged 14+) and their families across Southeast Ireland with personalised, high-level guidance and development support.</p>
+      <p class="body">We work with a small number of players at any one time. Our focus is long-term success — on the pitch and off it — and our role is independent: every decision is made in the best interests of the player.</p>
+
+      <div class="stats" style="grid-template-columns:repeat(2,1fr)">
+        <div class="stat reveal d2"><div class="k"><i>14</i>+</div><div class="v">Player age — committed to long-term development</div></div>
+        <div class="stat reveal d3"><div class="k"><i>1</i>:1</div><div class="v">Personal, founder-led relationships</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISION / MISSION ============ -->
+<section class="pillars" id="vision">
+  <div class="pillars-grid">
+    <div class="pillar reveal">
+      <div class="label">Our Vision</div>
+      <h3>The most trusted football consultancy in <i>Ireland</i>.</h3>
+      <p>Known for developing players and guiding families with clarity, honesty, and long-term focus — not for chasing short-term outcomes or commercial timelines.</p>
+    </div>
+    <div class="pillar reveal d2">
+      <div class="label">Our Mission</div>
+      <h3>Structured, honest <i>guidance</i> for every stage of the journey.</h3>
+      <p>To help young players maximise their potential — and to support families through every decision, every transition, every conversation along the way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="approach-grid">
+      <div class="approach-img reveal" aria-hidden="true">
+        <span class="badge">SETU Arena · Waterford</span>
+      </div>
+      <div class="reveal d2">
+        <div class="eyebrow">02 — Our Approach</div>
+        <h2 class="h2">We act as <i>independent advisors</i> — focused solely on the player.</h2>
+        <p class="body" style="margin-top:32px">Clubs and agents play important roles, but their perspectives are shaped by their own structures, timelines, and commercial interests. Players and families don't always have access to fully independent, long-term guidance.</p>
+        <p class="body">Southeast Player Management exists to provide that clarity.</p>
+
+        <div class="approach-list">
+          <div class="approach-row">
+            <div class="n">i</div>
+            <div>
+              <div class="t">Understand realistic development pathways</div>
+              <div class="d">Honest assessment of where a player is — and where they could go.</div>
+            </div>
+          </div>
+          <div class="approach-row">
+            <div class="n">ii</div>
+            <div>
+              <div class="t">Make informed, well-timed decisions</div>
+              <div class="d">The right opportunities pursued at the right moments, never rushed.</div>
+            </div>
+          </div>
+          <div class="approach-row">
+            <div class="n">iii</div>
+            <div>
+              <div class="t">Avoid common pitfalls and unnecessary pressure</div>
+              <div class="d">Calm, structured perspective in an environment that often lacks it.</div>
+            </div>
+          </div>
+          <div class="approach-row">
+            <div class="n">iv</div>
+            <div>
+              <div class="t">Access trusted networks and opportunities</div>
+              <div class="d">Local knowledge combined with established relationships across the game.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFFERENCE / QUOTE ============ -->
+<section class="difference">
+  <div class="difference-inner reveal">
+    <div class="quote-mark">“</div>
+    <p class="quote">We combine football expertise with <i>business discipline</i> — not just coaches, but trusted advisors and long-term partners.</p>
+    <div class="attribution">Our Difference · Mike & Seán Geoghegan, Founders</div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services-head">
+      <div class="reveal">
+        <div class="eyebrow">03 — What We Offer</div>
+      </div>
+      <div class="reveal d2">
+        <h2 class="h2">A simple, transparent structure — built for <i>real development.</i></h2>
+      </div>
+    </div>
+
+    <div class="service-cards">
+      <article class="service reveal">
+        <div class="num">i — Entry</div>
+        <h4>Player Assessment</h4>
+        <p class="desc">Live match observation followed by written feedback, insights, and clear development recommendations. The starting point for every relationship.</p>
+        <ul>
+          <li>Live match observation</li>
+          <li>Written feedback &amp; insights</li>
+          <li>Development recommendations</li>
+        </ul>
+        <div class="price">One-off engagement</div>
+      </article>
+
+      <article class="service reveal d2">
+        <div class="num">ii — Core</div>
+        <h4>Development Membership</h4>
+        <p class="desc">Our annual programme — personalised development advice, regular reviews, parent consultations, and pathway guidance throughout the year.</p>
+        <ul>
+          <li>Personalised development advice</li>
+          <li>Regular reviews</li>
+          <li>Parent consultation sessions</li>
+          <li>Club &amp; pathway guidance</li>
+          <li>Priority access to services</li>
+        </ul>
+        <div class="price">Annual programme</div>
+      </article>
+
+      <article class="service reveal d3">
+        <div class="num">iii — Optional</div>
+        <h4>Specialist Services</h4>
+        <p class="desc">A vetted network of specialists, available to members as required — coaching, conditioning, psychology, nutrition, and performance analysis.</p>
+        <ul>
+          <li>Private coaching</li>
+          <li>Strength &amp; conditioning</li>
+          <li>Sports psychology</li>
+          <li>Nutrition planning</li>
+          <li>Performance analysis</li>
+        </ul>
+        <div class="price">Member add-ons</div>
+      </article>
+    </div>
+
+    <p class="pricing-note reveal">Detailed pricing shared on enquiry.</p>
+  </div>
+</section>
+
+<!-- ============ PEOPLE ============ -->
+<section class="people" id="people">
+  <div class="wrap">
+    <div class="people-head">
+      <div class="reveal">
+        <div class="eyebrow">04 — The Team</div>
+      </div>
+      <div class="reveal d2">
+        <h2 class="h2">Founders &amp; <i>associates.</i></h2>
+      </div>
+    </div>
+
+    <div class="people-grid">
+      <article class="person reveal">
+        <div class="portrait has-photo"><img src="images/mike-geoghegan.png" alt="Mike Geoghegan" /></div>
+        <div>
+          <h4>Mike Geoghegan</h4>
+        </div>
+        <div class="role">Founder &amp; Senior Partner</div>
+        <div class="creds">MBA · Bachelor Financial Services · UEFA Elite Youth A License</div>
+        <ul>
+          <li>Former Academy Manager at Waterford FC</li>
+          <li>Extensive experience in youth player development and academy structures</li>
+          <li>Current CEO with experience in business leadership, consultancy, and organisational strategy</li>
+          <li>Strong background in change management, programme delivery, and high-performance environments</li>
+        </ul>
+      </article>
+
+      <article class="person reveal d2">
+        <div class="portrait has-photo"><img src="images/sean-geoghegan.jpg" alt="Seán Geoghegan" /></div>
+        <div>
+          <h4>Seán Geoghegan</h4>
+        </div>
+        <div class="role">Founder &amp; Senior Partner</div>
+        <div class="creds">MBA · MSc · UEFA Elite Youth A License</div>
+        <ul>
+          <li>Extensive experience within academy-level football environments</li>
+          <li>Background combining sport and business</li>
+          <li>Experience contributing to youth development structures</li>
+          <li>Based in the United States, bringing a broader perspective on player pathways</li>
+        </ul>
+      </article>
+
+      <article class="person reveal d3">
+        <div class="portrait has-photo"><img src="images/david-doyle-headshot.png" alt="David Doyle" /></div>
+        <div>
+          <h4>David Doyle</h4>
+        </div>
+        <div class="role">Head Scout</div>
+        <ul>
+          <li>30+ years' coaching experience from grassroots through to U20 Academy level</li>
+          <li>10+ years' experience in scouting, recruitment and player assessment</li>
+          <li>Specialises in one-to-one player engagement and mentoring</li>
+          <li>Passionate about player development and long-term progression</li>
+          <li>Committed to helping players maximise their potential on and off the pitch</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">05 — Get In Touch</div>
+      <h2 class="h2">Begin the <i>conversation.</i></h2>
+      <p class="lead" style="margin-top:32px">If you're a player or parent considering the journey ahead, we'd welcome an initial conversation.</p>
+
+      <div class="contact-info">
+        <div class="info-row">
+          <span class="k">Based at</span>
+          <span class="v">SETU Arena<br/>Waterford, Ireland</span>
+        </div>
+        <div class="info-row">
+          <span class="k">Email</span>
+          <span class="v"><a class="email-link" data-u="info" data-d="southeastplayermanagement.ie" href="#"></a></span>
+        </div>
+        <div class="info-row">
+          <span class="k">Working with</span>
+          <span class="v">Players aged 14+ <br/>across Southeast Ireland</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="reveal d2" id="enquiry-form"
+          action="https://formsubmit.co/info@southeastplayermanagement.ie"
+          method="POST"
+          onsubmit="
+            const btn = this.querySelector('.submit');
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+          ">
+      <input type="hidden" name="_subject" value="New website enquiry — Southeast Player Management" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://southeastplayermanagement.ie/thank-you.html" />
+      <input type="text" name="_honey" style="display:none" />
+      <div class="field">
+        <label for="f-name">Your name</label>
+        <input id="f-name" name="Name" type="text" required placeholder="First and last name" />
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="Email" type="email" required placeholder="you@example.com" />
+      </div>
+      <div class="field">
+        <label for="f-role">I am a…</label>
+        <select id="f-role" name="I am a">
+          <option>Parent enquiring on behalf of a player</option>
+          <option>Coach or club representative</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-msg">A little about the player</label>
+        <textarea id="f-msg" name="Message" placeholder="Age, current club, position, and what you're hoping to explore."></textarea>
+      </div>
+      <button class="submit" type="submit">
+        Send enquiry
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5h16m0 0L13 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <svg class="foot-logo-svg" data-logo="full" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3955.5 852.62"><g><g id="Layer_2" data-name="Layer 2"><g><g><path d="M979.2,355.33C921.76,162.3,745.42,2.79,500,0,254.58,2.79,78.24,162.3,20.8,355.33c-49.57,166.6-12.75,356.47,134.11,497.29-87.95-100.95-128.33-214.39-131.06-323.61l116.17-125.25,169.83,34.27,72.06,206.41-108.13,174.6,115.24-169.17h221.94l115.24,169.17-108.13-174.6,72.06-206.41,169.83-34.27,116.17,125.25c-2.72,109.22-43.1,222.66-131.06,323.61,146.86-140.82,183.68-330.69,134.11-497.29ZM500,39.03c41.11,0,81.36,5.35,119.97,15.49l-119.97,52.13-119.97-52.13c38.61-10.14,78.86-15.49,119.97-15.49ZM23.91,503.81c1.34-48.1,9.93-95.12,24.92-139.59,14.01-41.58,33.38-80.23,57.13-115.32l13.86,134.17-95.91,120.74ZM146.88,378.03l-10.11-169.8c51.88-61.36,118.45-108.71,193.17-137.51l155.38,62.21,2.3,157.86-172.16,128.95-168.57-41.72ZM609.86,640.1h-219.72l-62.28-206.89,172.15-121.28h0s0,0,0,0l172.15,121.28-62.28,206.89ZM853.12,378.03l-168.57,41.72-172.16-128.95,2.3-157.86,155.38-62.21c74.72,28.81,141.28,76.15,193.17,137.51l-10.11,169.8ZM880.18,383.07l13.86-134.17c23.75,35.09,43.12,73.74,57.13,115.32,14.99,44.47,23.57,91.49,24.92,139.59l-95.91-120.74Z"></path></g><g><path d="M1212.01,297.51c-7.91,0-15.07-.59-21.47-1.78-6.41-1.19-12.38-2.88-17.91-5.1-2.06-.79-2.85-2.14-2.37-4.03l1.9-7.83c.47-2.37,2.14-3,4.98-1.9,4.27,1.9,9.45,3.6,15.54,5.1,6.09,1.51,12.37,2.25,18.86,2.25,11.39,0,19.81-2.53,25.27-7.59,5.46-5.06,8.19-12.18,8.19-21.35v-2.61c0-4.27-.4-7.91-1.19-10.91-.79-3-2.13-5.58-4.03-7.71-1.9-2.14-4.47-3.91-7.71-5.34-3.24-1.42-7.32-2.77-12.22-4.03l-15.9-3.8c-11.39-2.69-19.85-7.04-25.39-13.05-5.54-6.01-8.3-14.47-8.3-25.39v-3.56c0-12.81,4.11-22.54,12.34-29.18,8.22-6.64,19.29-9.96,33.21-9.96,6.8,0,13.01.4,18.62,1.19,5.61.79,10.71,1.9,15.3,3.32,1.74.47,2.77,1.11,3.08,1.9.32.79.32,1.9,0,3.32l-1.66,5.69c-.63,2.37-2.53,3.08-5.69,2.14-5.22-1.58-9.96-2.69-14.24-3.32-4.27-.63-9.25-.95-14.95-.95-19.61,0-29.42,8.7-29.42,26.1v2.37c0,4.27.55,7.83,1.66,10.68,1.11,2.85,2.73,5.22,4.86,7.12,2.13,1.9,4.75,3.44,7.83,4.63,3.08,1.19,6.6,2.25,10.56,3.2l14.95,3.56c6.48,1.58,11.94,3.44,16.37,5.58,4.43,2.14,8.03,4.74,10.79,7.83,2.77,3.08,4.75,6.76,5.93,11.03s1.78,9.33,1.78,15.18v3.8c0,14.71-4.27,25.62-12.81,32.74s-20.8,10.68-36.77,10.68Z"></path><path d="M1393.03,224.91c0,13.13-1.07,24.48-3.2,34.04-2.13,9.57-5.89,17.36-11.27,23.37-4.43,5.06-10.01,8.86-16.73,11.39-6.72,2.53-15.07,3.8-25.03,3.8-9.33,0-17.24-1.15-23.73-3.44-6.49-2.29-11.94-5.65-16.37-10.08-6.01-6.01-10.2-13.92-12.57-23.72-2.37-9.81-3.56-21.59-3.56-35.35v-12.34c0-13.29,1.1-24.79,3.32-34.52,2.21-9.73,6.09-17.59,11.62-23.61,4.43-4.9,10-8.58,16.73-11.03,6.72-2.45,14.91-3.68,24.56-3.68s17.83,1.23,24.55,3.68c6.72,2.45,12.3,6.13,16.73,11.03,5.53,6.01,9.41,13.84,11.62,23.49,2.21,9.65,3.32,21.2,3.32,34.64v12.34ZM1297.9,221.82c0,11.07.63,21.08,1.9,30.01,1.26,8.94,4.19,16.1,8.78,21.47,3,3.48,6.76,6.17,11.27,8.07s10.16,2.85,16.96,2.85c7.43,0,13.52-1.07,18.27-3.2s8.54-5.18,11.39-9.13c3.95-5.53,6.48-12.65,7.59-21.35,1.1-8.7,1.66-18.27,1.66-28.71v-6.41c0-9.96-.47-19.41-1.42-28.35-.95-8.93-3.56-16.25-7.83-21.95-2.85-3.8-6.64-6.76-11.39-8.9s-10.83-3.2-18.27-3.2-13.05,1.07-17.79,3.2-8.54,5.1-11.39,8.9c-4.12,5.54-6.76,12.62-7.95,21.23-1.19,8.62-1.78,18.31-1.78,29.06v6.41Z"></path><path d="M1523.21,245.55c0,17.72-4.27,30.84-12.81,39.38-4.27,4.11-9.65,7.24-16.13,9.37-6.49,2.13-14.55,3.2-24.2,3.2s-17.72-1.07-24.2-3.2c-6.49-2.14-11.86-5.26-16.13-9.37-8.54-8.54-12.81-21.67-12.81-39.38v-99.65c0-2.69,1.26-4.03,3.8-4.03h8.78c2.53,0,3.8,1.35,3.8,4.03v98.7c0,6.49.63,12.18,1.9,17.08,1.26,4.9,3.4,9.02,6.41,12.34,6.01,6.8,15.5,10.2,28.47,10.2s22.46-3.4,28.47-10.2c3-3.32,5.14-7.43,6.41-12.34,1.26-4.9,1.9-10.59,1.9-17.08v-98.7c0-2.69,1.26-4.03,3.8-4.03h8.78c2.53,0,3.8,1.35,3.8,4.03v99.65Z"></path><path d="M1589.26,295.37c-1.27,0-2.14-.24-2.61-.71-.47-.47-.71-1.42-.71-2.85v-136.66h-40.33c-1.42,0-2.37-.32-2.85-.95-.47-.63-.71-1.5-.71-2.61v-6.64c0-1.58.39-2.49,1.19-2.73.79-.24,1.58-.36,2.37-.36h97.04c1.42,0,2.37.28,2.85.83.47.56.71,1.46.71,2.73v6.17c0,1.11-.24,1.98-.71,2.61-.47.63-1.42.95-2.85.95h-40.33v136.66c0,1.42-.24,2.37-.71,2.85-.47.47-1.35.71-2.61.71h-9.73Z"></path><path d="M1772.34,291.34c0,2.69-1.27,4.03-3.8,4.03h-9.01c-2.37,0-3.56-1.34-3.56-4.03v-68.09h-74.26v68.09c0,2.69-1.27,4.03-3.8,4.03h-8.54c-2.69,0-4.03-1.34-4.03-4.03v-145.43c0-2.69,1.26-4.03,3.8-4.03h8.78c2.53,0,3.8,1.35,3.8,4.03v63.58h74.26v-63.58c0-2.69,1.26-4.03,3.8-4.03h8.78c2.53,0,3.8,1.35,3.8,4.03v145.43Z"></path><path d="M1828.12,295.37c-4.9,0-8.98-.39-12.22-1.19-3.24-.79-5.97-2.14-8.18-4.03-2.22-1.9-3.92-4.39-5.1-7.47-1.19-3.08-1.94-6.92-2.25-11.51-.63-7.59-1.03-15.18-1.19-22.78-.16-7.59-.24-15.42-.24-23.49v-12.57c0-2.85.04-6.21.12-10.08.08-3.87.16-7.95.24-12.22.08-4.27.24-8.5.47-12.69.24-4.19.51-7.95.83-11.27.63-9.02,3.16-15.34,7.59-18.98,2.21-1.9,4.94-3.24,8.19-4.03,3.24-.79,7.31-1.19,12.22-1.19h54.57c1.42,0,2.37.28,2.85.83.47.56.71,1.46.71,2.73v6.17c0,1.11-.24,1.98-.71,2.61-.47.63-1.42.95-2.85.95h-53.38c-2.53,0-4.55.28-6.05.83-1.5.56-2.73,1.31-3.68,2.25-1.58,1.58-2.53,4.83-2.85,9.73-.32,5.69-.63,11.62-.95,17.79-.32,6.17-.47,14.08-.47,23.73h56.23c1.42,0,2.37.28,2.85.83.47.56.71,1.46.71,2.73v6.17c0,1.11-.24,1.98-.71,2.61-.47.63-1.42.95-2.85.95h-56.23c0,10.76.04,19.73.12,26.93.08,7.2.36,13.96.83,20.28.32,4.9,1.26,8.15,2.85,9.73,1.74,1.58,4.98,2.37,9.73,2.37h53.86c1.42,0,2.37.32,2.85.95.47.63.71,1.5.71,2.61v6.17c0,1.27-.24,2.18-.71,2.73-.47.56-1.42.83-2.85.83h-55.04Z"></path><path d="M1964.56,141.87c3,0,5.06.36,6.17,1.07,1.1.71,2.29,2.57,3.56,5.58,2.21,5.54,4.35,11.43,6.41,17.67,2.05,6.25,4.11,12.46,6.17,18.62,5.38,16.77,10.68,34.09,15.9,51.96,5.22,17.88,10.12,35.91,14.71,54.09.63,3.01-.4,4.51-3.08,4.51h-9.25c-2.53,0-4.11-1.26-4.74-3.8-1.9-7.59-3.8-15.02-5.69-22.3-1.9-7.27-3.88-14.55-5.93-21.83h-57.18l-11.39,44.13c-.63,2.53-2.22,3.8-4.75,3.8h-9.49c-2.69,0-3.72-1.34-3.08-4.03,4.58-18.19,9.49-36.3,14.71-54.33,5.22-18.03,10.59-35.43,16.13-52.19,2.05-6.17,4.15-12.37,6.29-18.62,2.14-6.25,4.31-12.14,6.52-17.67,1.26-3,2.41-4.86,3.44-5.58,1.03-.71,3.04-1.07,6.05-1.07h8.54ZM1948.19,190.51c-2.06,6.8-4.15,13.84-6.29,21.12-2.14,7.28-4.23,14.47-6.29,21.59h49.35l-12.57-42.71c-1.27-4.59-2.89-9.88-4.86-15.9-1.98-6.01-3.92-11.78-5.81-17.32h-2.85c-1.9,5.54-3.84,11.31-5.81,17.32-1.98,6.01-3.6,11.31-4.86,15.9Z"></path><path d="M2075.64,297.51c-7.91,0-15.07-.59-21.47-1.78-6.41-1.19-12.38-2.88-17.91-5.1-2.06-.79-2.85-2.14-2.37-4.03l1.9-7.83c.47-2.37,2.14-3,4.98-1.9,4.27,1.9,9.45,3.6,15.54,5.1,6.09,1.51,12.37,2.25,18.86,2.25,11.39,0,19.81-2.53,25.27-7.59,5.46-5.06,8.19-12.18,8.19-21.35v-2.61c0-4.27-.4-7.91-1.19-10.91-.79-3-2.13-5.58-4.03-7.71-1.9-2.14-4.47-3.91-7.71-5.34-3.24-1.42-7.32-2.77-12.22-4.03l-15.9-3.8c-11.39-2.69-19.85-7.04-25.39-13.05-5.54-6.01-8.3-14.47-8.3-25.39v-3.56c0-12.81,4.11-22.54,12.34-29.18,8.22-6.64,19.29-9.96,33.21-9.96,6.8,0,13.01.4,18.62,1.19,5.61.79,10.71,1.9,15.3,3.32,1.74.47,2.77,1.11,3.08,1.9.32.79.32,1.9,0,3.32l-1.66,5.69c-.63,2.37-2.53,3.08-5.69,2.14-5.22-1.58-9.96-2.69-14.24-3.32-4.27-.63-9.25-.95-14.95-.95-19.61,0-29.42,8.7-29.42,26.1v2.37c0,4.27.55,7.83,1.66,10.68,1.11,2.85,2.73,5.22,4.86,7.12,2.13,1.9,4.75,3.44,7.83,4.63,3.08,1.19,6.6,2.25,10.56,3.2l14.95,3.56c6.48,1.58,11.94,3.44,16.37,5.58,4.43,2.14,8.03,4.74,10.79,7.83,2.77,3.08,4.75,6.76,5.93,11.03s1.78,9.33,1.78,15.18v3.8c0,14.71-4.27,25.62-12.81,32.74s-20.8,10.68-36.77,10.68Z"></path><path d="M2183.35,295.37c-1.27,0-2.14-.24-2.61-.71-.47-.47-.71-1.42-.71-2.85v-136.66h-40.33c-1.42,0-2.37-.32-2.85-.95-.47-.63-.71-1.5-.71-2.61v-6.64c0-1.58.39-2.49,1.19-2.73.79-.24,1.58-.36,2.37-.36h97.04c1.42,0,2.37.28,2.85.83.47.56.71,1.46.71,2.73v6.17c0,1.11-.24,1.98-.71,2.61-.47.63-1.42.95-2.85.95h-40.33v136.66c0,1.42-.24,2.37-.71,2.85-.47.47-1.35.71-2.61.71h-9.73Z"></path><path d="M1228.36,638.76c0,3.73-.58,6.12-1.75,7.17-1.17,1.05-3.73,1.57-7.69,1.57h-25.17c-3.97,0-6.53-.52-7.69-1.57-1.17-1.05-1.75-3.44-1.75-7.17v-203.83c0-5.36.87-9.03,2.62-11.01,1.75-1.98,4.95-3.2,9.61-3.67,6.76-.93,14.68-1.51,23.78-1.75,9.09-.23,18.99-.35,29.72-.35,15.15,0,28.37,1.17,39.68,3.5,11.3,2.33,20.68,6.53,28.15,12.59,7.22,5.59,12.47,12.82,15.73,21.68,3.26,8.86,4.89,19.7,4.89,32.52v6.29c0,25.41-7.58,44.05-22.73,55.94-8.16,6.53-17.72,11.07-28.67,13.64-10.96,2.57-23.77,3.85-38.46,3.85h-20.28v70.62ZM1251.08,454.15h-9.96c-3.38,0-6.35.23-8.92.69-2.57.47-3.85,2.09-3.85,4.87v71.7h21.68c15.85,0,27.04-2.84,33.56-8.53,6.52-5.68,9.79-15.6,9.79-29.76v-4.53c0-7.19-.7-12.82-2.1-16.88-1.4-4.06-3.73-7.36-6.99-9.92-3.5-2.79-7.64-4.76-12.41-5.92-4.78-1.16-11.71-1.74-20.8-1.74Z"></path><path d="M1406.35,601c0,4.2.75,7.17,2.27,8.92,1.51,1.75,4.14,2.62,7.87,2.62h10.49c3.26,0,5.42.58,6.47,1.75,1.05,1.17,1.57,3.38,1.57,6.64v18.18c0,3.27-.58,5.48-1.75,6.64-1.17,1.17-3.27,1.75-6.29,1.75h-23.42c-7.46,0-13.29-.64-17.48-1.92-4.2-1.28-7.93-3.44-11.19-6.47-3.5-3.5-6.06-7.87-7.69-13.11-1.63-5.25-2.45-12.29-2.45-21.15v-185.3c0-3.5.64-5.82,1.92-6.99,1.28-1.16,3.9-1.75,7.87-1.75h22.03c3.96,0,6.58.58,7.87,1.75,1.28,1.17,1.92,3.5,1.92,6.99v181.46Z"></path><path d="M1558.51,632.82c-3.27,5.83-7.87,10.26-13.81,13.29-5.94,3.03-14.16,4.54-24.65,4.54h-12.94c-9.09,0-16.61-.87-22.55-2.62-5.94-1.75-11.25-4.6-15.91-8.57-5.13-4.42-8.92-9.96-11.36-16.61-2.45-6.64-3.67-14.16-3.67-22.55v-8.04c0-18.88,4.89-32.4,14.68-40.56,5.36-4.66,12.24-7.98,20.63-9.96,8.39-1.98,18.53-2.97,30.42-2.97h12.59c3.26,0,6.58.06,9.96.17,3.38.12,6.58.29,9.62.52v-9.44c0-8.62-1.98-14.56-5.94-17.83-2.57-1.86-5.65-3.15-9.27-3.85-3.62-.7-8.57-1.05-14.86-1.05s-13.29.58-20.98,1.75c-7.69,1.17-15.03,2.8-22.03,4.9-2.8.93-4.84.87-6.12-.17-1.28-1.05-2.16-2.85-2.62-5.42l-3.15-16.43c-.7-3.03-.76-5.3-.17-6.82.58-1.51,2.39-2.74,5.42-3.67,6.52-2.1,14.62-4.02,24.3-5.77,9.67-1.75,19.17-2.62,28.5-2.62,12.59,0,22.61.87,30.07,2.62,7.46,1.75,14.21,4.61,20.28,8.57,6.29,4.43,10.89,10.08,13.81,16.96,2.91,6.88,4.37,16.61,4.37,29.19v110.48c0,4.43-2.45,6.64-7.34,6.64h-16.08c-4.67,0-7.46-2.1-8.39-6.29l-2.1-8.39h-.7ZM1551.51,572.68c-3.05-.23-6.33-.4-9.85-.52-3.52-.11-7.04-.17-10.55-.17h-12.31c-3.99,0-7.57.29-10.73.87-3.17.58-5.69,1.69-7.56,3.32-3.52,2.8-5.28,8.51-5.28,17.13v4.2c0,7.46,1.76,12.71,5.28,15.73,1.4,1.17,3.34,2.16,5.8,2.97,2.46.82,5.69,1.22,9.68,1.22h12.66c8.21,0,14.07-1.86,17.59-5.59,3.52-3.73,5.28-9.67,5.28-17.83v-21.33Z"></path><path d="M1651.4,694.7c3.73-7.69,7.4-15.38,11.01-23.08,3.61-7.69,7.05-15.5,10.31-23.43-4.67-1.4-8.74-3.79-12.24-7.17-3.5-3.38-6.53-8.8-9.09-16.26-6.53-18.41-13.46-39.74-20.8-63.98-7.34-24.24-14.4-49.76-21.15-76.57-1.17-5.36,1.51-8.04,8.04-8.04h23.77c5.59,0,8.86,2.45,9.79,7.34,4.89,21.45,10.25,43,16.08,64.68,5.82,21.68,12,42.77,18.53,63.28h1.4c8.86-25.64,16.02-49.65,21.5-72.02,5.47-22.38,9.49-41.02,12.06-55.94.93-4.9,4.2-7.34,9.79-7.34h23.42c6.52,0,9.21,2.68,8.04,8.04-7.69,35.66-17.43,71.62-29.19,107.86-11.77,36.25-26.87,74.41-45.28,114.5-1.87,4.2-4.2,6.29-6.99,6.29-2.57,0-5.25-.58-8.04-1.75l-17.13-6.99c-2.57-1.17-4.14-2.45-4.72-3.85-.58-1.4-.29-3.27.87-5.59Z"></path><path d="M1912.57,571.63c0,3.73-.64,6.35-1.92,7.87-1.28,1.52-3.79,2.27-7.52,2.27h-87.41c.23,13.76,3.15,23.08,8.74,27.97,2.33,2.1,5.94,3.79,10.84,5.07,4.89,1.28,11.54,1.92,19.93,1.92,5.82,0,12.35-.7,19.58-2.1,7.22-1.4,13.29-3.15,18.18-5.24,2.1-.93,3.96-1.16,5.59-.7,1.63.47,3.03,2.57,4.2,6.29l4.54,16.78c.7,2.57.64,4.54-.17,5.94-.82,1.4-2.86,2.68-6.12,3.85-7.46,2.8-15.56,5.01-24.3,6.64-8.74,1.63-17.54,2.45-26.4,2.45-14.22,0-26.05-1.46-35.49-4.37-9.44-2.91-17.19-7.4-23.25-13.46-6.76-6.99-11.48-15.79-14.16-26.4-2.68-10.6-4.02-23.95-4.02-40.03v-9.44c0-13.75,1.22-25.87,3.67-36.36s6.47-19.23,12.06-26.22c5.59-6.99,12.99-12.29,22.2-15.91,9.21-3.61,20.57-5.42,34.09-5.42,11.89,0,21.68,1.34,29.37,4.02,7.69,2.68,14.33,6.59,19.93,11.71,2.8,2.57,5.3,5.54,7.52,8.92,2.21,3.38,4.08,7.4,5.59,12.06,1.51,4.67,2.68,10.08,3.5,16.26.81,6.18,1.22,13.46,1.22,21.85v23.77ZM1844.04,506.25c-8.86,0-15.5,2.32-19.93,6.94-3.27,3.23-5.59,7.86-6.99,13.87-1.4,6.01-2.1,13.18-2.1,21.5h51.4c3.03,0,4.54-1.62,4.54-4.86,0-7.63-.47-13.98-1.4-19.07-.93-5.09-2.68-9.02-5.24-11.79-2.1-2.31-4.67-3.99-7.69-5.03-3.03-1.04-7.23-1.56-12.59-1.56Z"></path><path d="M1973.09,498.91h.7c5.36-7.92,11.48-13.69,18.36-17.31,6.87-3.61,16.26-5.42,28.14-5.42h4.9c3.73,0,6.29.52,7.69,1.57s2.1,3.32,2.1,6.82v18.53c0,3.03-.64,5.13-1.92,6.29-1.28,1.17-3.91,1.75-7.87,1.75h-6.29c-7.69,0-13.76.82-18.18,2.45-4.43,1.63-7.81,3.73-10.14,6.29-2.33,2.57-4.25,5.89-5.77,9.96-1.52,4.08-2.27,10.66-2.27,19.75v89.16c0,3.5-.64,5.83-1.92,6.99-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.16-1.92-3.5-1.92-6.99v-154.54c0-5.36,2.8-8.04,8.39-8.04h12.24c3.03,0,5.18.41,6.47,1.22,1.28.82,2.15,2.51,2.62,5.07l2.45,16.43Z"></path><path d="M2248.59,619.18c-4.43,0-7.81-.23-10.14-.7-2.33-.46-4.43-2.8-6.29-6.99-3.27-7.92-6.94-17.42-11.01-28.5-4.08-11.07-8.34-22.67-12.76-34.79-4.43-12.12-8.69-24.18-12.76-36.19-4.08-12-7.75-22.9-11.01-32.69h-1.75c-.24,11.89-.41,24.47-.52,37.76-.12,13.29-.17,26.81-.17,40.56v81.81c0,3.97-.7,6.29-2.1,6.99s-4.08,1.05-8.04,1.05h-23.42c-3.97,0-6.7-.35-8.22-1.05-1.52-.7-2.16-3.03-1.92-6.99.46-17.25.93-34.79,1.4-52.62.46-17.83.99-35.54,1.57-53.14.58-17.6,1.22-34.9,1.92-51.92.7-17.01,1.63-33.44,2.8-49.3.46-5.36,1.86-8.57,4.2-9.61,2.33-1.05,6.76-1.57,13.29-1.57h23.42c6.99,0,11.71.47,14.16,1.4,2.45.93,4.49,3.85,6.12,8.74,8.16,24.71,16.31,49.3,24.47,73.77,8.16,24.47,16.08,47.55,23.78,69.23h1.75c8.16-21.68,16.43-44.69,24.82-69.05,8.39-24.35,16.43-48.89,24.12-73.6.7-2.33,1.51-4.2,2.45-5.59.93-1.4,2.1-2.45,3.5-3.15s3.2-1.16,5.42-1.4c2.21-.23,5.07-.35,8.57-.35h23.43c6.52,0,10.89.58,13.11,1.75,2.21,1.17,3.55,4.43,4.02,9.79,1.16,15.85,2.1,32.29,2.8,49.3.7,17.02,1.34,34.26,1.92,51.75.58,17.48,1.1,35.14,1.57,52.97.46,17.83.93,35.37,1.4,52.62.23,3.97-.41,6.29-1.92,6.99-1.52.7-4.26,1.05-8.22,1.05h-23.43c-3.97,0-6.64-.35-8.04-1.05-1.4-.7-2.1-3.03-2.1-6.99v-81.81c0-13.75-.12-27.27-.35-40.56-.23-13.29-.47-25.87-.7-37.76h-1.75c-3.27,9.79-6.99,20.69-11.19,32.69-4.2,12.01-8.39,24.01-12.59,36.01-4.2,12.01-8.28,23.6-12.24,34.79-3.97,11.19-7.34,20.75-10.14,28.67-1.63,4.43-3.73,6.82-6.29,7.17-2.57.35-6.06.52-10.49.52h-16.43Z"></path><path d="M2504.76,632.82c-3.27,5.83-7.87,10.26-13.81,13.29-5.94,3.03-14.16,4.54-24.65,4.54h-12.94c-9.09,0-16.61-.87-22.55-2.62-5.94-1.75-11.25-4.6-15.91-8.57-5.13-4.42-8.92-9.96-11.36-16.61-2.45-6.64-3.67-14.16-3.67-22.55v-8.04c0-18.88,4.89-32.4,14.68-40.56,5.36-4.66,12.24-7.98,20.63-9.96,8.39-1.98,18.53-2.97,30.42-2.97h12.59c3.26,0,6.58.06,9.96.17,3.38.12,6.58.29,9.62.52v-9.44c0-8.62-1.98-14.56-5.94-17.83-2.57-1.86-5.65-3.15-9.27-3.85-3.62-.7-8.57-1.05-14.86-1.05s-13.29.58-20.98,1.75c-7.69,1.17-15.03,2.8-22.03,4.9-2.8.93-4.84.87-6.12-.17-1.28-1.05-2.16-2.85-2.62-5.42l-3.15-16.43c-.7-3.03-.76-5.3-.17-6.82.58-1.51,2.39-2.74,5.42-3.67,6.52-2.1,14.62-4.02,24.3-5.77,9.67-1.75,19.17-2.62,28.5-2.62,12.59,0,22.61.87,30.07,2.62,7.46,1.75,14.21,4.61,20.28,8.57,6.29,4.43,10.89,10.08,13.81,16.96,2.91,6.88,4.37,16.61,4.37,29.19v110.48c0,4.43-2.45,6.64-7.34,6.64h-16.08c-4.67,0-7.46-2.1-8.39-6.29l-2.1-8.39h-.7ZM2497.77,572.68c-3.05-.23-6.33-.4-9.85-.52-3.52-.11-7.04-.17-10.55-.17h-12.31c-3.99,0-7.57.29-10.73.87-3.17.58-5.69,1.69-7.56,3.32-3.52,2.8-5.28,8.51-5.28,17.13v4.2c0,7.46,1.76,12.71,5.28,15.73,1.4,1.17,3.34,2.16,5.8,2.97,2.46.82,5.69,1.22,9.68,1.22h12.66c8.21,0,14.07-1.86,17.59-5.59,3.52-3.73,5.28-9.67,5.28-17.83v-21.33Z"></path><path d="M2715.76,638.76c0,3.5-.64,5.83-1.92,6.99-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.17-1.92-3.5-1.92-7.01v-97.79c0-7.01-.52-12.62-1.57-16.83s-2.97-7.71-5.77-10.52c-2.57-2.57-5.65-4.44-9.26-5.6-3.62-1.17-8.22-1.75-13.81-1.75-10.49,0-17.95,2.1-22.38,6.31-2.33,2.1-4.14,4.85-5.42,8.24-1.28,3.39-1.92,8.7-1.92,15.95v101.99c0,3.51-.64,5.84-1.92,7.01-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.16-1.92-3.5-1.92-6.99v-154.54c0-5.36,2.8-8.04,8.39-8.04h12.94c3.03,0,5.18.4,6.47,1.21,1.28.81,2.15,2.48,2.62,5l1.75,8.29h1.05c4.9-5.07,11.01-9.28,18.36-12.62,7.34-3.34,17.07-5.02,29.19-5.02s23.19,1.81,31.82,5.42c8.62,3.62,15.73,9.62,21.33,18.01,3.96,6.06,6.52,13.17,7.69,21.33,1.16,8.16,1.75,16.67,1.75,25.52v95.45Z"></path><path d="M2845.15,632.82c-3.27,5.83-7.87,10.26-13.81,13.29-5.94,3.03-14.16,4.54-24.65,4.54h-12.94c-9.09,0-16.61-.87-22.55-2.62-5.94-1.75-11.25-4.6-15.91-8.57-5.13-4.42-8.92-9.96-11.36-16.61-2.45-6.64-3.67-14.16-3.67-22.55v-8.04c0-18.88,4.89-32.4,14.68-40.56,5.36-4.66,12.24-7.98,20.63-9.96,8.39-1.98,18.53-2.97,30.42-2.97h12.59c3.26,0,6.58.06,9.96.17,3.38.12,6.58.29,9.62.52v-9.44c0-8.62-1.98-14.56-5.94-17.83-2.57-1.86-5.65-3.15-9.27-3.85-3.62-.7-8.57-1.05-14.86-1.05s-13.29.58-20.98,1.75c-7.69,1.17-15.03,2.8-22.03,4.9-2.8.93-4.84.87-6.12-.17-1.28-1.05-2.16-2.85-2.62-5.42l-3.15-16.43c-.7-3.03-.76-5.3-.17-6.82.58-1.51,2.39-2.74,5.42-3.67,6.52-2.1,14.62-4.02,24.3-5.77,9.67-1.75,19.17-2.62,28.5-2.62,12.59,0,22.61.87,30.07,2.62,7.46,1.75,14.21,4.61,20.28,8.57,6.29,4.43,10.89,10.08,13.81,16.96,2.91,6.88,4.37,16.61,4.37,29.19v110.48c0,4.43-2.45,6.64-7.34,6.64h-16.08c-4.67,0-7.46-2.1-8.39-6.29l-2.1-8.39h-.7ZM2838.16,572.68c-3.05-.23-6.33-.4-9.85-.52-3.52-.11-7.04-.17-10.55-.17h-12.31c-3.99,0-7.57.29-10.73.87-3.17.58-5.69,1.69-7.56,3.32-3.52,2.8-5.28,8.51-5.28,17.13v4.2c0,7.46,1.76,12.71,5.28,15.73,1.4,1.17,3.34,2.16,5.8,2.97,2.46.82,5.69,1.22,9.68,1.22h12.66c8.21,0,14.07-1.86,17.59-5.59,3.52-3.73,5.28-9.67,5.28-17.83v-21.33Z"></path><path d="M2983.46,473.03c3.96-10.95,9.84-18.93,17.66-23.95,7.81-5.01,18.36-7.52,31.64-7.52h12.24c2.56,0,4.37.52,5.42,1.57s1.57,3.09,1.57,6.12v14.33c0,3.27-.52,5.3-1.57,6.12-1.05.82-2.86,1.22-5.42,1.22h-14.33c-5.59,0-9.44.42-11.54,1.23s-3.85,2.17-5.24,4.04c15.38,4.65,25.64,12.8,30.77,24.44,5.12,11.64,7.69,26.3,7.69,43.98v10.82c0,13.26-1.87,24.26-5.59,32.99-3.73,8.73-8.86,15.77-15.38,21.12,8.98,5.84,15.88,12.61,20.72,20.32,4.83,7.7,7.25,16.35,7.25,25.92v3.15c0,9.57-1.39,17.21-4.16,22.94-2.78,5.72-6.7,10.8-11.78,15.24-6.01,5.37-13.83,9.34-23.46,11.91-9.62,2.57-22.13,3.85-37.51,3.85-10.49,0-21.5-1.17-33.04-3.5-11.54-2.33-22.79-5.48-33.74-9.44-5.59-2.1-7.58-5.83-5.94-11.19l4.89-15.73c.93-2.8,2.27-4.55,4.02-5.25s3.67-.58,5.77.35c8.16,3.5,17.19,6.41,27.1,8.74,9.9,2.33,19.4,3.5,28.5,3.5,7.46,0,13.75-.58,18.88-1.75,5.12-1.17,9.32-3.27,12.59-6.29,2.56-2.33,4.25-4.96,5.07-7.87.81-2.92,1.22-6.24,1.22-9.96v-2.45c0-11.89-5.36-20.98-16.08-27.27-2.57.47-5.77.93-9.62,1.4-3.85.47-8.22.7-13.11.7-12.59,0-22.85-1.16-30.77-3.5-7.93-2.33-15.03-5.94-21.33-10.84-7.69-6.06-13.17-13.81-16.43-23.25-3.27-9.44-4.89-20.68-4.89-33.74v-10.84c0-14.68,1.75-26.51,5.24-35.49,3.5-8.97,9.09-16.49,16.78-22.55,6.29-4.89,13.75-8.39,22.38-10.49,8.62-2.1,18.29-3.15,29.02-3.15h4.54ZM2947.8,552.73c0,8.1.46,14.74,1.4,19.95.93,5.2,3.03,9.77,6.29,13.7,3.73,4.86,11.54,7.28,23.43,7.28,6.06,0,10.89-.52,14.51-1.56,3.61-1.04,6.7-2.95,9.27-5.72,3.03-3.7,5.01-8.56,5.94-14.57.93-6.01,1.4-12.37,1.4-19.08v-6.24c0-7.17-.41-13.7-1.22-19.6-.82-5.89-2.86-10.46-6.12-13.7-5.13-4.62-13.06-6.94-23.77-6.94-5.37,0-10.14.58-14.33,1.74-4.2,1.16-7.23,2.89-9.09,5.2-3.27,3.7-5.36,8.39-6.29,14.05-.93,5.67-1.4,12.08-1.4,19.25v6.24Z"></path><path d="M3214.36,571.63c0,3.73-.64,6.35-1.92,7.87-1.28,1.52-3.79,2.27-7.52,2.27h-87.41c.23,13.76,3.15,23.08,8.74,27.97,2.33,2.1,5.94,3.79,10.84,5.07,4.89,1.28,11.54,1.92,19.93,1.92,5.82,0,12.35-.7,19.58-2.1,7.22-1.4,13.29-3.15,18.18-5.24,2.1-.93,3.96-1.16,5.59-.7,1.63.47,3.03,2.57,4.2,6.29l4.54,16.78c.7,2.57.64,4.54-.17,5.94-.82,1.4-2.86,2.68-6.12,3.85-7.46,2.8-15.56,5.01-24.3,6.64-8.74,1.63-17.54,2.45-26.4,2.45-14.22,0-26.05-1.46-35.49-4.37-9.44-2.91-17.19-7.4-23.25-13.46-6.76-6.99-11.48-15.79-14.16-26.4-2.68-10.6-4.02-23.95-4.02-40.03v-9.44c0-13.75,1.22-25.87,3.67-36.36s6.47-19.23,12.06-26.22c5.59-6.99,12.99-12.29,22.2-15.91,9.21-3.61,20.57-5.42,34.09-5.42,11.89,0,21.68,1.34,29.37,4.02,7.69,2.68,14.33,6.59,19.93,11.71,2.8,2.57,5.3,5.54,7.52,8.92,2.21,3.38,4.08,7.4,5.59,12.06,1.51,4.67,2.68,10.08,3.5,16.26.81,6.18,1.22,13.46,1.22,21.85v23.77ZM3145.83,506.25c-8.86,0-15.5,2.32-19.93,6.94-3.27,3.23-5.59,7.86-6.99,13.87-1.4,6.01-2.1,13.18-2.1,21.5h51.4c3.03,0,4.54-1.62,4.54-4.86,0-7.63-.47-13.98-1.4-19.07-.93-5.09-2.68-9.02-5.24-11.79-2.1-2.31-4.67-3.99-7.69-5.03-3.03-1.04-7.23-1.56-12.59-1.56Z"></path><path d="M3484.31,638.76c0,3.5-.64,5.83-1.92,6.99-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.17-1.92-3.5-1.92-7.01v-97.79c0-6.77-.47-12.27-1.4-16.48-.93-4.21-2.68-7.71-5.24-10.52-2.33-2.57-5.25-4.49-8.74-5.78-3.5-1.28-8.16-1.93-13.99-1.93-11.89,0-21.68,4.44-29.37,13.32.7,6.08,1.05,13.9,1.05,23.49v95.68c0,3.51-.64,5.84-1.92,7.01-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.17-1.92-3.5-1.92-7.01v-97.79c0-7.01-.52-12.62-1.57-16.83s-2.97-7.71-5.77-10.52c-2.57-2.57-5.48-4.44-8.74-5.6-3.27-1.17-7.69-1.75-13.29-1.75-10.49,0-17.95,2.1-22.38,6.31-2.33,2.1-4.14,4.85-5.42,8.24-1.28,3.39-1.92,8.7-1.92,15.95v101.99c0,3.51-.64,5.84-1.92,7.01-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.16-1.92-3.5-1.92-6.99v-154.54c0-5.36,2.8-8.04,8.39-8.04h12.94c3.03,0,5.18.4,6.47,1.21,1.28.81,2.15,2.48,2.62,5l1.75,8.29h1.05c5.59-5.53,12.24-9.86,19.93-12.97,7.69-3.11,16.43-4.67,26.22-4.67,11.19,0,20.86,1.75,29.02,5.24,8.16,3.5,14.68,8.28,19.58,14.33,15.61-13.05,33.09-19.58,52.45-19.58s34.96,4.89,44.75,14.68c10.95,10.72,16.43,27.97,16.43,51.75v99.29Z"></path><path d="M3649.96,571.63c0,3.73-.64,6.35-1.92,7.87-1.28,1.52-3.79,2.27-7.52,2.27h-87.41c.23,13.76,3.15,23.08,8.74,27.97,2.33,2.1,5.94,3.79,10.84,5.07,4.89,1.28,11.54,1.92,19.93,1.92,5.82,0,12.35-.7,19.58-2.1,7.22-1.4,13.29-3.15,18.18-5.24,2.1-.93,3.96-1.16,5.59-.7,1.63.47,3.03,2.57,4.2,6.29l4.54,16.78c.7,2.57.64,4.54-.17,5.94-.82,1.4-2.86,2.68-6.12,3.85-7.46,2.8-15.56,5.01-24.3,6.64-8.74,1.63-17.54,2.45-26.4,2.45-14.22,0-26.05-1.46-35.49-4.37-9.44-2.91-17.19-7.4-23.25-13.46-6.76-6.99-11.48-15.79-14.16-26.4-2.68-10.6-4.02-23.95-4.02-40.03v-9.44c0-13.75,1.22-25.87,3.67-36.36s6.47-19.23,12.06-26.22c5.59-6.99,12.99-12.29,22.2-15.91,9.21-3.61,20.57-5.42,34.09-5.42,11.89,0,21.68,1.34,29.37,4.02,7.69,2.68,14.33,6.59,19.93,11.71,2.8,2.57,5.3,5.54,7.52,8.92,2.21,3.38,4.08,7.4,5.59,12.06,1.51,4.67,2.68,10.08,3.5,16.26.81,6.18,1.22,13.46,1.22,21.85v23.77ZM3581.43,506.25c-8.86,0-15.5,2.32-19.93,6.94-3.27,3.23-5.59,7.86-6.99,13.87-1.4,6.01-2.1,13.18-2.1,21.5h51.4c3.03,0,4.54-1.62,4.54-4.86,0-7.63-.47-13.98-1.4-19.07-.93-5.09-2.68-9.02-5.24-11.79-2.1-2.31-4.67-3.99-7.69-5.03-3.03-1.04-7.23-1.56-12.59-1.56Z"></path><path d="M3821.66,638.76c0,3.5-.64,5.83-1.92,6.99-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.17-1.92-3.5-1.92-7.01v-97.79c0-7.01-.52-12.62-1.57-16.83s-2.97-7.71-5.77-10.52c-2.57-2.57-5.65-4.44-9.26-5.6-3.62-1.17-8.22-1.75-13.81-1.75-10.49,0-17.95,2.1-22.38,6.31-2.33,2.1-4.14,4.85-5.42,8.24-1.28,3.39-1.92,8.7-1.92,15.95v101.99c0,3.51-.64,5.84-1.92,7.01-1.28,1.17-3.91,1.75-7.87,1.75h-22.03c-3.97,0-6.59-.58-7.87-1.75-1.28-1.16-1.92-3.5-1.92-6.99v-154.54c0-5.36,2.8-8.04,8.39-8.04h12.94c3.03,0,5.18.4,6.47,1.21,1.28.81,2.15,2.48,2.62,5l1.75,8.29h1.05c4.9-5.07,11.01-9.28,18.36-12.62,7.34-3.34,17.07-5.02,29.19-5.02s23.19,1.81,31.82,5.42c8.62,3.62,15.73,9.62,21.33,18.01,3.96,6.06,6.52,13.17,7.69,21.33,1.16,8.16,1.75,16.67,1.75,25.52v95.45Z"></path><path d="M3909.35,476.18h34.61c3.03,0,5.01.64,5.94,1.92.93,1.28,1.4,3.67,1.4,7.17v17.13c0,3.03-.47,5.24-1.4,6.64-.93,1.4-2.92,2.1-5.94,2.1h-34.61v76.22c0,6.29.23,10.84.7,13.64.46,2.8,1.63,5.13,3.5,6.99,1.63,1.87,3.61,3.09,5.94,3.67,2.33.58,5.82.87,10.49.87h17.13c3.73,0,6.06.64,6.99,1.92.93,1.28,1.4,3.67,1.4,7.17v17.13c0,3.27-.41,5.54-1.22,6.82-.82,1.28-3.21,1.92-7.17,1.92h-25.17c-10.26,0-18.53-.87-24.82-2.62-6.29-1.75-11.66-4.6-16.08-8.57-8.86-8.16-13.29-22.14-13.29-41.96v-83.21h-20.98c-2.57,0-4.37-.46-5.42-1.4-1.05-.93-1.57-2.68-1.57-5.24v-15.38c0-2.8.4-4.6,1.22-5.42s2.27-1.45,4.37-1.92l22.38-3.85v-36.71c0-3.5.64-5.82,1.92-6.99,1.28-1.16,3.9-1.75,7.87-1.75h22.03c3.96,0,6.58.58,7.87,1.75,1.28,1.17,1.92,3.5,1.92,6.99v34.96Z"></path></g></g></g></g></svg>
+      <span class="tag">Developing players. Guiding futures.</span>
+    </div>
+    <div class="foot-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#who">Who We Are</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#people">People</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a class="email-link" data-u="info" data-d="southeastplayermanagement.ie" href="#">Email</a></li>
+        <li><a href="#contact">Enquire</a></li>
+        <li><a href="#contact">SETU Arena</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>Follow</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">X / Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Southeast Player Management</span>
+    <span>Boutique Football Consultancy · Waterford, Ireland</span>
+  </div>
+</footer>
+
+<script>
+  // sticky-nav state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    for (const e of entries) if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // build mailto links at runtime (bypasses Cloudflare email obfuscation)
+  document.querySelectorAll('.email-link').forEach(a => {
+    const u = a.dataset.u, d = a.dataset.d;
+    if (u && d) {
+      a.setAttribute('href', 'mailto:' + u + '@' + d);
+      if (!a.textContent.trim()) a.textContent = u + '@' + d;
+    }
+  });
+</script>
+
+<div id="tweaks-root"></div>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "heroSize": 116,
+    "heroLine": 0.96,
+    "heroTrack": 0,
+    "heroLine1": "Developing players.",
+    "heroLine2": "Guiding futures.",
+    "heroLine3": "",
+    "goldColor": "#D4B97A"
+  }/*EDITMODE-END*/;
+
+  function TweaksApp(){
+    const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+    React.useEffect(() => {
+      const r = document.documentElement.style;
+      r.setProperty('--hero-size', t.heroSize + 'px');
+      r.setProperty('--hero-line', String(t.heroLine));
+      r.setProperty('--hero-track', (t.heroTrack/100).toFixed(3) + 'em');
+      r.setProperty('--gold', t.goldColor);
+    }, [t.heroSize, t.heroLine, t.heroTrack, t.goldColor]);
+
+    React.useEffect(() => {
+      const rows = document.querySelectorAll('.hero-wordmark .row span');
+      if (rows[0]) rows[0].textContent = t.heroLine1;
+      if (rows[1]) rows[1].textContent = t.heroLine2;
+      if (rows[2]) rows[2].textContent = t.heroLine3;
+    }, [t.heroLine1, t.heroLine2, t.heroLine3]);
+
+    return (
+      <TweaksPanel>
+        <TweakSection label="Hero text" />
+        <TweakSlider label="Size" value={t.heroSize} min={48} max={200} step={2} unit="px"
+                     onChange={(v) => setTweak('heroSize', v)} />
+        <TweakSlider label="Line height" value={t.heroLine} min={0.85} max={1.3} step={0.01}
+                     onChange={(v) => setTweak('heroLine', v)} />
+        <TweakSlider label="Tracking" value={t.heroTrack} min={-6} max={2} step={0.5} unit="%"
+                     onChange={(v) => setTweak('heroTrack', v)} />
+        <TweakSection label="Hero copy" />
+        <TweakText label="Line 1" value={t.heroLine1}
+                   onChange={(v) => setTweak('heroLine1', v)} />
+        <TweakText label="Line 2 (italic)" value={t.heroLine2}
+                   onChange={(v) => setTweak('heroLine2', v)} />
+        <TweakText label="Line 3" value={t.heroLine3}
+                   onChange={(v) => setTweak('heroLine3', v)} />
+        <TweakSection label="Accent" />
+        <TweakColor label="Gold" value={t.goldColor}
+                    options={['#D4B97A','#C8A560','#E6C97A','#B89B5A','#A98A52']}
+                    onChange={(v) => setTweak('goldColor', v)} />
+      </TweaksPanel>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<TweaksApp/>);
+</script>
+</body>
+</html>
